@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鍼灸院のためのnote資産集客術</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#fdfbf7;color:#1a1814;font-family:'Noto Sans JP',sans-serif;font-size:16px;line-height:1.85;-webkit-text-size-adjust:100%;word-break:break-word;}
+:root{
+  --ink:#1a1814;--ink2:#3d3830;--ink3:#6b6358;
+  --gold:#b8924a;--gold-light:#e8d5b0;--gold-pale:#faf5ec;
+  --rule:#d4c9b8;--bg:#fdfbf7;--white:#fff;
+  --accent:#1f3d5c;--accent-light:#e8eef4;
+  --success:#2d6a4f;--success-light:#e8f5ee;
+  --note:#41a882;--note-light:#e6f5ef;--note-pale:#f2faf7;
+}
+/* HERO */
+.hero{background:var(--accent);color:#fff;padding:clamp(44px,8vw,80px) clamp(16px,5vw,24px) clamp(36px,6vw,72px);text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px);}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:14px;}
+.hero-title{font-family:'Noto Serif JP',serif;font-size:clamp(20px,5vw,46px);font-weight:700;line-height:1.35;margin-bottom:10px;}
+.hero-sub{font-family:'Noto Serif JP',serif;font-size:clamp(13px,2.8vw,18px);color:var(--gold-light);margin-bottom:24px;line-height:1.7;}
+.hero-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 22px;}
+.hero-desc{max-width:600px;margin:0 auto;font-size:15px;color:rgba(255,255,255,.78);line-height:2;}
+/* BADGE */
+.badge-bar{background:var(--gold);padding:10px clamp(12px,3vw,24px);display:flex;justify-content:center;gap:clamp(8px,2.5vw,28px);flex-wrap:wrap;}
+.badge-item{color:#fff;font-size:14px;font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:4px;}
+.badge-item::before{content:'✦';font-size:10px;}
+/* TOC */
+.toc-wrap{max-width:860px;margin:clamp(28px,5vw,56px) auto;padding:0 clamp(14px,4vw,24px);}
+.toc-box{border:1px solid var(--rule);background:#fff;padding:clamp(18px,4vw,36px) clamp(16px,4vw,40px);}
+.toc-title{font-family:'Noto Serif JP',serif;font-size:12px;font-weight:600;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--rule);}
+.toc-list{list-style:none;}
+.toc-list li{padding:4px 0;border-bottom:1px dotted var(--rule);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{color:var(--ink2);text-decoration:none;font-size:15px;display:flex;align-items:baseline;gap:8px;padding:3px 0;-webkit-tap-highlight-color:rgba(184,146,74,.15);}
+.toc-list a:hover,.toc-list a:active{color:var(--gold);}
+.toc-num{font-family:'DM Serif Display',serif;font-size:12px;color:var(--gold);min-width:40px;font-style:italic;flex-shrink:0;}
+/* MAIN */
+.main{max-width:860px;margin:0 auto;padding:0 clamp(14px,4vw,24px) clamp(48px,8vw,80px);}
+/* CHAPTER */
+.chapter{margin-bottom:clamp(44px,7vw,72px);padding-bottom:clamp(44px,7vw,72px);border-bottom:1px solid var(--rule);}
+.chapter:last-child{border-bottom:none;}
+.chapter-header{display:flex;align-items:flex-start;gap:clamp(10px,2.5vw,24px);margin-bottom:clamp(22px,4vw,36px);padding-bottom:clamp(16px,3vw,28px);border-bottom:2px solid var(--ink);}
+.chapter-num{font-family:'DM Serif Display',serif;font-size:clamp(44px,9vw,72px);line-height:1;color:var(--gold);font-style:italic;min-width:clamp(44px,9vw,70px);margin-top:-5px;flex-shrink:0;}
+.chapter-label{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;}
+.chapter-title{font-family:'Noto Serif JP',serif;font-size:clamp(15px,3.5vw,24px);font-weight:700;line-height:1.45;color:var(--ink);}
+/* HEADINGS */
+.sec-h2{font-family:'Noto Serif JP',serif;font-size:clamp(15px,3.5vw,20px);font-weight:700;color:var(--ink);margin:clamp(26px,5vw,40px) 0 13px;padding-bottom:9px;border-bottom:1px solid var(--rule);position:relative;}
+.sec-h2::before{content:'';position:absolute;left:0;bottom:-1px;width:34px;height:2px;background:var(--gold);}
+.sec-h3{font-family:'Noto Serif JP',serif;font-size:clamp(14px,2.8vw,17px);font-weight:600;color:var(--ink);margin:18px 0 8px;}
+/* BODY */
+.body-text{font-size:15px;line-height:1.95;color:var(--ink2);margin-bottom:12px;}
+.body-text strong{color:var(--ink);font-weight:700;}
+/* CONCEPT BOX */
+.concept-box{background:var(--accent);color:#fff;padding:clamp(22px,4vw,40px);margin-bottom:clamp(28px,5vw,48px);position:relative;}
+.concept-title{font-family:'Noto Serif JP',serif;font-size:clamp(16px,3.5vw,20px);font-weight:700;color:#fff;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.2);margin-bottom:16px;}
+.concept-p{font-size:15px;line-height:1.95;color:rgba(255,255,255,.9);margin-bottom:12px;}
+.concept-p strong{color:var(--gold-light);font-weight:700;}
+/* BOXES */
+.highlight-box{background:var(--gold-pale);border:1px solid var(--gold-light);border-left:4px solid var(--gold);padding:clamp(12px,3vw,18px) clamp(12px,3vw,22px);margin:16px 0;font-size:15px;line-height:1.9;color:var(--ink2);}
+.success-box{background:var(--success-light);border-left:4px solid var(--success);padding:clamp(12px,3vw,18px) clamp(12px,3vw,22px);margin:16px 0;font-size:15px;line-height:1.9;color:var(--ink2);}
+.note-box{background:var(--note-pale);border:1px solid #b2dece;border-left:4px solid var(--note);padding:clamp(12px,3vw,18px) clamp(12px,3vw,22px);margin:16px 0;font-size:15px;line-height:1.9;color:var(--ink2);}
+.warn-box{background:#fff5f5;border-left:4px solid #c0392b;padding:clamp(10px,2.5vw,16px) clamp(10px,2.5vw,20px);margin:12px 0;font-size:15px;line-height:1.9;color:var(--ink2);}
+.case-box{background:var(--accent-light);border:1px solid #c5d5e5;border-left:4px solid var(--accent);padding:clamp(10px,2.5vw,16px) clamp(10px,2.5vw,20px);margin:12px 0;font-size:15px;line-height:1.9;color:var(--ink2);}
+.case-box strong{color:var(--accent);font-weight:700;}
+/* FLOW STEPS */
+.flow-steps{display:flex;flex-direction:column;gap:0;margin:16px 0;}
+.flow-step{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule);}
+.flow-step:last-child{border-bottom:none;}
+.flow-icon{width:30px;height:30px;min-width:30px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;flex-shrink:0;}
+.flow-icon.note-icon{background:var(--note);}
+.flow-text{font-size:15px;color:var(--ink2);}
+.flow-arrow{text-align:center;padding:4px 0;color:var(--gold);font-size:18px;}
+/* LISTS */
+.dot-list{list-style:none;margin:10px 0;}
+.dot-list li{padding:5px 0 5px 18px;font-size:15px;color:var(--ink2);position:relative;}
+.dot-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:11px;top:7px;}
+.check-list{list-style:none;margin:10px 0;}
+.check-list li{padding:5px 0 5px 22px;font-size:15px;color:var(--ink2);position:relative;border-bottom:1px dotted var(--rule);}
+.check-list li:last-child{border-bottom:none;}
+.check-list li::before{content:'✓';position:absolute;left:0;color:var(--note);font-size:14px;font-weight:700;}
+.num-list{list-style:none;margin:10px 0;counter-reset:item;}
+.num-list li{counter-increment:item;padding:9px 0 9px 38px;border-bottom:1px dotted var(--rule);font-size:15px;color:var(--ink2);position:relative;}
+.num-list li:last-child{border-bottom:none;}
+.num-list li::before{content:counter(item);position:absolute;left:0;top:7px;width:24px;height:24px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+/* STAT GRID */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:16px 0;}
+.stat-card{background:#fff;border:1px solid var(--rule);padding:clamp(12px,2.5vw,18px);text-align:center;}
+.stat-num{font-family:'DM Serif Display',serif;font-size:clamp(18px,4.5vw,26px);color:var(--gold);font-style:italic;line-height:1;margin-bottom:4px;}
+.stat-label{font-size:13px;color:var(--ink3);font-weight:500;}
+/* COMPARE GRID */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+.compare-card{border:1px solid var(--rule);padding:clamp(14px,3vw,20px);background:#fff;}
+.compare-card.bad{border-top:3px solid #c0392b;}
+.compare-card.good{border-top:3px solid var(--note);}
+.compare-card-label{font-size:12px;font-weight:700;letter-spacing:.08em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--rule);}
+.compare-card.bad .compare-card-label{color:#c0392b;}
+.compare-card.good .compare-card-label{color:var(--note);}
+.compare-card ul{list-style:none;margin:0;}
+.compare-card ul li{font-size:14px;color:var(--ink2);padding:4px 0 4px 16px;position:relative;border-bottom:1px dotted var(--rule);}
+.compare-card ul li:last-child{border-bottom:none;}
+.compare-card.bad ul li::before{content:'✗';position:absolute;left:0;color:#c0392b;font-size:12px;top:5px;}
+.compare-card.good ul li::before{content:'◎';position:absolute;left:0;color:var(--note);font-size:12px;top:5px;}
+/* SECTION BADGE */
+.section-num{display:inline-block;background:var(--accent);color:#fff;font-family:'DM Serif Display',serif;font-size:14px;font-style:italic;padding:2px 10px;margin-right:8px;vertical-align:middle;}
+/* STEP BOX */
+.step-box{border:1px solid var(--rule);background:#fff;padding:clamp(16px,3vw,24px);margin:14px 0;position:relative;}
+.step-label{position:absolute;top:-1px;left:0;background:var(--note);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 10px;}
+.step-body{font-size:15px;line-height:1.95;color:var(--ink2);margin-top:8px;}
+/* APPENDIX HEADER */
+.appendix-header{background:var(--ink);color:#fff;padding:clamp(20px,4vw,30px) clamp(18px,4vw,36px);margin-bottom:clamp(22px,4vw,32px);}
+.appendix-eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.appendix-title{font-family:'Noto Serif JP',serif;font-size:clamp(16px,4vw,22px);font-weight:700;}
+/* FOOTER */
+.footer{background:var(--ink);color:rgba(255,255,255,.5);text-align:center;padding:clamp(26px,5vw,40px) clamp(16px,4vw,24px);font-size:14px;letter-spacing:.04em;}
+.footer-gold{color:var(--gold);font-family:'Noto Serif JP',serif;font-size:clamp(14px,3vw,17px);display:block;margin-bottom:8px;}
+.footer-copy{margin-top:10px;font-size:14px;color:rgba(255,255,255,.65);}
+/* RESPONSIVE */
+@media(max-width:480px){
+  .compare-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(min-width:481px) and (max-width:768px){
+  .stat-grid{grid-template-columns:repeat(3,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow">Store Attraction Strategy</p>
+  <h1 class="hero-title">鍼灸院のための<br>note資産集客術</h1>
+  <p class="hero-sub">SNSのように流れて消える投稿ではなく、<br>検索される悩み記事を積み上げ、<br>Google検索・AI検索からホームページ予約につなげる店舗集客法。</p>
+  <div class="hero-rule"></div>
+  <p class="hero-desc">バズではなく、未来のお客様に検索で見つけてもらう。<br>専門性を記事資産として蓄積し、信頼残高が高まった見込み客を予約につなげる仕組みを解説します。</p>
+</header>
+
+<!-- BADGE BAR -->
+<div class="badge-bar">
+  <span class="badge-item">全14章構成</span>
+  <span class="badge-item">資産型集客の設計図</span>
+  <span class="badge-item">AI検索時代対応</span>
+  <span class="badge-item">導線設計付き</span>
+</div>
+
+<!-- TOC -->
+<div class="toc-wrap">
+  <div class="toc-box">
+    <p class="toc-title">目次</p>
+    <ul class="toc-list">
+      <li><a href="#ch1"><span class="toc-num">Ch.1</span>企画コンセプト</a></li>
+      <li><a href="#ch2"><span class="toc-num">Ch.2</span>想定タイトルとコピー案</a></li>
+      <li><a href="#ch3"><span class="toc-num">Ch.3</span>市場背景と業界課題</a></li>
+      <li><a href="#ch4"><span class="toc-num">Ch.4</span>note集客の位置づけと基本導線</a></li>
+      <li><a href="#ch5"><span class="toc-num">Ch.5</span>noteが狙うべき検索領域</a></li>
+      <li><a href="#ch6"><span class="toc-num">Ch.6</span>SNS集客との違い</a></li>
+      <li><a href="#ch7"><span class="toc-num">Ch.7</span>note経由の見込み客の質</a></li>
+      <li><a href="#ch8"><span class="toc-num">Ch.8</span>初回割引・リピート率への影響</a></li>
+      <li><a href="#ch9"><span class="toc-num">Ch.9</span>AI検索時代との相性</a></li>
+      <li><a href="#ch10"><span class="toc-num">Ch.10</span>サービスで提供する内容</a></li>
+      <li><a href="#ch11"><span class="toc-num">Ch.11</span>本企画の差別化ポイント</a></li>
+      <li><a href="#ch12"><span class="toc-num">Ch.12</span>想定ターゲット</a></li>
+      <li><a href="#ch13"><span class="toc-num">Ch.13</span>提供価値</a></li>
+      <li><a href="#ch14"><span class="toc-num">Ch.14</span>最終コンセプト</a></li>
+    </ul>
+  </div>
+</div>
+
+<main class="main">
+
+<!-- ===== CH1 ===== -->
+<section class="chapter" id="ch1">
+  <div class="chapter-header">
+    <div class="chapter-num">1</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter One</p>
+      <h2 class="chapter-title">企画コンセプト</h2>
+    </div>
+  </div>
+
+  <div class="concept-box">
+    <h3 class="concept-title">本企画が解決すること</h3>
+    <p class="concept-p">本企画は、鍼灸院向けに、<strong>noteを活用した店舗集客の仕組み</strong>を提供するものです。</p>
+    <p class="concept-p">一般的なSNS集客のように、毎日投稿やバズに依存するのではなく、<strong>検索される悩み記事をnoteに積み上げ、ホームページ予約につなげる「資産型の店舗集客」</strong>を支援します。</p>
+  </div>
+
+  <h3 class="sec-h2">従来の集客との根本的な違い</h3>
+  <div class="compare-grid">
+    <div class="compare-card bad">
+      <div class="compare-card-label">❌ 従来型の集客（消費型）</div>
+      <ul>
+        <li>毎日投稿しないと埋もれる</li>
+        <li>バズがないと見てもらえない</li>
+        <li>投稿が流れて消える</li>
+        <li>リールや動画制作が必要</li>
+        <li>広告費・掲載費に頼り続ける</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-card-label">◎ note資産集客（蓄積型）</div>
+      <ul>
+        <li>書いた記事が資産として残る</li>
+        <li>検索流入で見つけてもらえる</li>
+        <li>時間が経っても効果が続く</li>
+        <li>文章だけで取り組みやすい</li>
+        <li>長期的な集客コストを下げられる</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CH2 ===== -->
+<section class="chapter" id="ch2">
+  <div class="chapter-header">
+    <div class="chapter-num">2</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Two</p>
+      <h2 class="chapter-title">想定タイトルとコピー案</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">メインタイトル</h3>
+  <div class="highlight-box" style="text-align:center;font-family:'Noto Serif JP',serif;font-size:clamp(16px,3.5vw,20px);font-weight:700;padding:clamp(20px,4vw,32px);">
+    鍼灸院のためのnote資産集客術
+  </div>
+
+  <h3 class="sec-h2">サブコピー案①</h3>
+  <div class="note-box">
+    SNSのように流れて消える投稿ではなく、<strong>検索される悩み記事からホームページ予約につなげる方法</strong>
+  </div>
+
+  <h3 class="sec-h2">サブコピー案②</h3>
+  <div class="note-box">
+    Instagramの毎日投稿に疲れた鍼灸院へ。<br>
+    noteに<strong>"検索される悩み記事"</strong>を積み上げ、Google検索・AI検索からホームページ予約につなげる<strong>資産型の店舗集客術。</strong>
+  </div>
+</section>
+
+<!-- ===== CH3 ===== -->
+<section class="chapter" id="ch3">
+  <div class="chapter-header">
+    <div class="chapter-num">3</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Three</p>
+      <h2 class="chapter-title">市場背景と業界課題</h2>
+    </div>
+  </div>
+
+  <p class="body-text">鍼灸院業界では、Instagram、MEO、ホットペッパー、広告などの集客手段が一般化しています。しかし、多くの施術者は以下のような課題を抱えています。</p>
+
+  <h3 class="sec-h2">施術者が抱える7つの課題</h3>
+  <ul class="num-list">
+    <li>Instagramの毎日投稿が続かない</li>
+    <li>リールや動画制作が苦手</li>
+    <li>バズっても予約につながらない</li>
+    <li>クーポン集客に依存している</li>
+    <li>ホットペッパーや広告費に頼りすぎている</li>
+    <li>自院の専門性や施術価値を十分に伝えられていない</li>
+    <li>初回割引で集めた顧客がリピートしにくい</li>
+  </ul>
+
+  <div class="success-box">このような背景から、短期的な露出ではなく、<strong>専門性や信頼を積み上げる集客手段へのニーズ</strong>が高まっています。</div>
+</section>
+
+<!-- ===== CH4 ===== -->
+<section class="chapter" id="ch4">
+  <div class="chapter-header">
+    <div class="chapter-num">4</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Four</p>
+      <h2 class="chapter-title">note集客の位置づけと基本導線</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">note集客の目的</h3>
+  <p class="body-text">本企画で提案するnote活用は、note内でフォロワーを増やすことや、有料noteを販売することが目的ではありません。</p>
+  <div class="highlight-box">目的は、<strong>note記事を検索入口として活用し、ホームページから店舗予約につなげること</strong>です。</div>
+
+  <h3 class="sec-h2">基本導線</h3>
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-icon note-icon">🔍</div><div class="flow-text"><strong>Google検索・AI検索</strong>（悩み・疑問で検索）</div></div>
+    <div class="flow-step"><div class="flow-icon note-icon">📝</div><div class="flow-text"><strong>note記事</strong>（施術者の考え方・悩みへの見立て）</div></div>
+    <div class="flow-step"><div class="flow-icon note-icon">🏠</div><div class="flow-text"><strong>ホームページの施術ページ</strong>（詳細確認・信頼形成）</div></div>
+    <div class="flow-step"><div class="flow-icon note-icon">📅</div><div class="flow-text"><strong>予約</strong>（納得した状態で来院）</div></div>
+  </div>
+  <p class="body-text">複雑なマーケティング導線ではなく、一般的な施術者でも実行しやすい、<strong>シンプルな店舗集客導線</strong>を構築します。</p>
+</section>
+
+<!-- ===== CH5 ===== -->
+<section class="chapter" id="ch5">
+  <div class="chapter-header">
+    <div class="chapter-num">5</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Five</p>
+      <h2 class="chapter-title">noteが狙うべき検索領域</h2>
+    </div>
+  </div>
+
+  <p class="body-text">noteは、地域名検索よりも、<strong>悩み・疑問・不安系のロングテール検索</strong>に向いています。</p>
+
+  <h3 class="sec-h2">noteに向いていない検索例</h3>
+  <div class="warn-box">
+    ❌ 吉祥寺 鍼灸院　❌ 渋谷 小顔矯正　❌ 新宿 整体 おすすめ　❌ 恵比寿 美容鍼<br><br>
+    これらはGoogleマップ、ホットペッパー、公式HP、比較サイトが強い領域です。
+  </div>
+
+  <h3 class="sec-h2">noteに向いている検索例</h3>
+  <div class="note-box">
+    <ul class="check-list">
+      <li>美容鍼 ほうれい線 何回</li>
+      <li>小顔矯正 戻る 理由</li>
+      <li>整体 もみ返し 好転反応 違い</li>
+      <li>産後 骨盤矯正 いつから</li>
+      <li>顔の左右差 片側だけたるむ 原因</li>
+      <li>肩こり マッサージしても戻る なぜ</li>
+      <li>鍼灸 自律神経 どんな人に向いている</li>
+    </ul>
+  </div>
+  <p class="body-text">このような悩み検索に対して、施術者としての考え方や来院目安を記事化し、ホームページ予約につなげます。</p>
+</section>
+
+<!-- ===== CH6 ===== -->
+<section class="chapter" id="ch6">
+  <div class="chapter-header">
+    <div class="chapter-num">6</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Six</p>
+      <h2 class="chapter-title">SNS集客との違い</h2>
+    </div>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card bad">
+      <div class="compare-card-label">Instagram・SNS集客</div>
+      <ul>
+        <li>投稿が流れて消える</li>
+        <li>バズがないと埋もれる</li>
+        <li>毎日投稿が前提</li>
+        <li>一時的な認知拡大</li>
+        <li>動画・リール制作が必要</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-card-label">note資産集客</div>
+      <ul>
+        <li>記事として蓄積される</li>
+        <li>検索流入を継続的に狙える</li>
+        <li>書いた記事が長期資産になる</li>
+        <li>専門性・信頼が積み上がる</li>
+        <li>文章力だけで取り組める</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    note集客は、<strong>一瞬のバズを狙う集客ではなく、悩みを抱えた見込み客に検索で見つけてもらう集客</strong>です。
+  </div>
+</section>
+
+<!-- ===== CH7 ===== -->
+<section class="chapter" id="ch7">
+  <div class="chapter-header">
+    <div class="chapter-num">7</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Seven</p>
+      <h2 class="chapter-title">note経由の見込み客の質</h2>
+    </div>
+  </div>
+
+  <p class="body-text">note経由の見込み客は、記事を読んでからホームページに進むため、<strong>来院前に一定の信頼形成が済んでいる</strong>可能性があります。</p>
+
+  <h3 class="sec-h2">SNS経由 vs note経由　来院動機の違い</h3>
+  <div class="compare-grid">
+    <div class="compare-card bad">
+      <div class="compare-card-label">SNS経由（軽い動機）</div>
+      <ul>
+        <li>雰囲気が良さそう</li>
+        <li>安いから試してみたい</li>
+        <li>ビフォーアフターが目に留まった</li>
+        <li>近いから行ってみよう</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-card-label">note経由（納得した動機）</div>
+      <ul>
+        <li>自分の悩みに関する記事を読む</li>
+        <li>施術者の考え方に納得する</li>
+        <li>他院との違いを理解する</li>
+        <li>ホームページで詳細を確認して予約</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="success-box">そのため、<strong>価格だけで比較されにくく、初回割引に過度に頼らない集客</strong>につながる可能性があります。</div>
+</section>
+
+<!-- ===== CH8 ===== -->
+<section class="chapter" id="ch8">
+  <div class="chapter-header">
+    <div class="chapter-num">8</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Eight</p>
+      <h2 class="chapter-title">初回割引・リピート率への影響</h2>
+    </div>
+  </div>
+
+  <p class="body-text">note記事で来院前に以下を伝えることで、来院時点での納得度が高まります。</p>
+  <ul class="dot-list">
+    <li>なぜその悩みが起こるのか</li>
+    <li>なぜ一時的な施術では戻りやすいのか</li>
+    <li>なぜ継続的なケアが必要なのか</li>
+    <li>どのような人に向いているのか</li>
+    <li>どのような考え方で施術するのか</li>
+  </ul>
+
+  <h3 class="sec-h2">来院動機の変化</h3>
+  <div class="compare-grid">
+    <div class="compare-card bad">
+      <div class="compare-card-label">従来の来院動機</div>
+      <ul>
+        <li>安いから行く</li>
+        <li>クーポンがあるから試す</li>
+        <li>とりあえず近いから</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-card-label">note経由の来院動機</div>
+      <ul>
+        <li>この先生に見てもらいたいから行く</li>
+        <li>記事を読んで納得したから予約する</li>
+        <li>自分の悩みに合っていると感じた</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>適切な表現：</strong><br>
+    「必ずリピート率が上がる」ではなく、<strong>「記事を読んで納得した見込み客を集めることで、リピートにつながりやすい構造を作る」</strong>という表現が適切です。
+  </div>
+</section>
+
+<!-- ===== CH9 ===== -->
+<section class="chapter" id="ch9">
+  <div class="chapter-header">
+    <div class="chapter-num">9</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Nine</p>
+      <h2 class="chapter-title">AI検索時代との相性</h2>
+    </div>
+  </div>
+
+  <p class="body-text">今後は、Google検索だけでなく、<strong>AI検索への対応</strong>も重要になります。ユーザーがAIに問いかける時代になっていきます。</p>
+
+  <h3 class="sec-h2">AI検索で問われる質問例</h3>
+  <div class="note-box">
+    <ul class="check-list">
+      <li>美容鍼はほうれい線に効果があるのか</li>
+      <li>小顔矯正が戻る理由は何か</li>
+      <li>産後骨盤矯正はいつから行くべきか</li>
+      <li>肩こりがマッサージしても戻る理由は何か</li>
+    </ul>
+  </div>
+
+  <p class="body-text">鍼灸院側がWeb上に専門的な情報を蓄積していなければ、AI検索で見つけられる可能性は低くなります。</p>
+
+  <h3 class="sec-h2">noteに蓄積すべき情報</h3>
+  <ul class="dot-list">
+    <li>施術者としての考え方</li>
+    <li>よくある相談内容</li>
+    <li>悩みに対する見立て</li>
+    <li>来院目安</li>
+    <li>向いている人・向いていない人</li>
+    <li>医療機関を勧めるケース</li>
+  </ul>
+
+  <div class="highlight-box">
+    <strong>適切な訴求表現：</strong><br>
+    「AI検索で必ず紹介される」ではなく、<strong>「Google検索だけでなく、AI検索にも拾われやすい"一次情報型コンテンツ"をnoteで積み上げる」</strong>という表現が適切です。
+  </div>
+</section>
+
+<!-- ===== CH10 ===== -->
+<section class="chapter" id="ch10">
+  <div class="chapter-header">
+    <div class="chapter-num">10</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Ten</p>
+      <h2 class="chapter-title">サービスで提供する内容</h2>
+    </div>
+  </div>
+
+  <p class="body-text">本サービスでは、鍼灸院がnoteを活用して店舗予約につなげるために、以下の7項目を提供します。</p>
+
+  <div class="step-box" style="margin-top:24px;">
+    <span class="step-label">① note集客の目的設定</span>
+    <div class="step-body">スキやフォロワーを増やすのではなく、<strong>ホームページ予約につなげること</strong>を目的に設計します。</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">② 悩みキーワードの洗い出し</span>
+    <div class="step-body">症状、部位、年代、不安、比較、失敗経験から、見込み客が検索しそうなテーマを洗い出します。</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">③ 検索されるタイトル作成</span>
+    <div class="step-body">
+      <ul class="dot-list" style="margin-top:8px;">
+        <li>小顔矯正がすぐ戻る理由</li>
+        <li>美容鍼はほうれい線に何回必要？</li>
+        <li>整体に通っても肩こりが戻る人の共通点</li>
+        <li>産後骨盤矯正はいつから受けるべき？</li>
+        <li>顔の左右差が片側だけ強く見える理由</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">④ 記事本文の型</span>
+    <div class="step-body">
+      <div class="flow-steps" style="margin-top:8px;">
+        <div class="flow-step"><div class="flow-icon">1</div><div class="flow-text">悩みへの共感</div></div>
+        <div class="flow-step"><div class="flow-icon">2</div><div class="flow-text">よくある誤解</div></div>
+        <div class="flow-step"><div class="flow-icon">3</div><div class="flow-text">施術者としての見解</div></div>
+        <div class="flow-step"><div class="flow-icon">4</div><div class="flow-text">来院目安</div></div>
+        <div class="flow-step"><div class="flow-icon">5</div><div class="flow-text">ホームページへの自然な誘導</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">⑤ ホームページへの導線設計</span>
+    <div class="step-body">
+      記事末尾で、売り込み感を出しすぎず、自然にホームページへ誘導します。<br><br>
+      例：「詳しい施術内容はこちら」「当院での対応についてはこちら」「ご予約前に施術ページをご確認ください」
+    </div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">⑥ ホームページ側の受け皿整備</span>
+    <div class="step-body">
+      noteから流入した見込み客が予約しやすいように、ホームページ側も整えます。必要な要素は以下です。
+      <ul class="dot-list" style="margin-top:8px;">
+        <li>施術内容</li><li>料金</li><li>プロフィール</li><li>症例・お客様の声</li><li>予約ボタン</li><li>アクセス情報</li><li>初回の流れ</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-label">⑦ 30記事の設計図作成</span>
+    <div class="step-body">1記事で大きく当てるのではなく、悩み記事を積み上げてロングテール集客を狙います。まずは<strong>30記事分のテーマ設計</strong>を行います。</div>
+  </div>
+</section>
+
+<!-- ===== CH11 ===== -->
+<section class="chapter" id="ch11">
+  <div class="chapter-header">
+    <div class="chapter-num">11</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Eleven</p>
+      <h2 class="chapter-title">本企画の差別化ポイント</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">一般的なnote活用との違い</h3>
+  <div class="warn-box">
+    一般的なnote集客は、noteでフォロワーを増やす・有料noteを販売する・note内でファンを作る・SNSと組み合わせて拡散する、という内容が多くなりがちです。
+  </div>
+
+  <div class="highlight-box">
+    本企画は、それらとは異なり、<strong>「鍼灸院の店舗予約につなげるnote活用」</strong>に特化します。
+  </div>
+
+  <h3 class="sec-h2">7つの差別化ポイント</h3>
+  <ul class="check-list">
+    <li>SNSが苦手な施術者でも取り組みやすい</li>
+    <li>バズではなく検索流入を狙う</li>
+    <li>悩み記事からホームページ予約につなげる</li>
+    <li>価格競争ではなく専門性で選ばれる導線を作る</li>
+    <li>Google検索だけでなくAI検索時代にも対応しやすい</li>
+    <li>初回割引に頼りすぎない集客導線を作れる</li>
+    <li>来院前教育により、リピートにつながりやすい構造を作れる</li>
+  </ul>
+</section>
+
+<!-- ===== CH12 ===== -->
+<section class="chapter" id="ch12">
+  <div class="chapter-header">
+    <div class="chapter-num">12</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Twelve</p>
+      <h2 class="chapter-title">想定ターゲット</h2>
+    </div>
+  </div>
+
+  <h3 class="sec-h2">対象となる鍼灸院</h3>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">鍼灸院</div><div class="stat-label">自律神経・美容鍼など</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">整体院</div><div class="stat-label">慢性痛・姿勢改善など</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">整骨院</div><div class="stat-label">スポーツ・産後など</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">美容整体</div><div class="stat-label">小顔・骨盤矯正など</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">エステ</div><div class="stat-label">フェイシャル・痩身など</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(14px,3vw,18px);font-style:normal;">産後ケア</div><div class="stat-label">骨盤・授乳ケアなど</div></div>
+  </div>
+
+  <h3 class="sec-h2">特に相性が良い層</h3>
+  <ul class="check-list">
+    <li>Instagram集客が苦手</li>
+    <li>毎日投稿に疲れている</li>
+    <li>ホットペッパーや広告費に依存している</li>
+    <li>初回割引で集めた顧客がリピートしにくい</li>
+    <li>専門性はあるが、発信で価値を伝えきれていない</li>
+    <li>高単価メニューを説明しきれていない</li>
+    <li>ホームページはあるがアクセスや予約が少ない</li>
+  </ul>
+</section>
+
+<!-- ===== CH13 ===== -->
+<section class="chapter" id="ch13">
+  <div class="chapter-header">
+    <div class="chapter-num">13</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Thirteen</p>
+      <h2 class="chapter-title">提供価値</h2>
+    </div>
+  </div>
+
+  <p class="body-text">本企画が提供する価値は、単なるnote運用ノウハウではありません。</p>
+
+  <div class="concept-box">
+    <h3 class="concept-title">提供するもの</h3>
+    <p class="concept-p"><strong>鍼灸院が、自院の専門性を検索される記事として蓄積し、信頼残高が高まった見込み客をホームページ予約につなげる仕組み</strong></p>
+  </div>
+
+  <h3 class="sec-h2">期待できる6つのメリット</h3>
+  <ul class="check-list">
+    <li>SNS投稿に追われにくくなる</li>
+    <li>価格比較されにくくなる</li>
+    <li>初回割引に頼りすぎない集客がしやすくなる</li>
+    <li>来院前に施術価値を理解してもらいやすくなる</li>
+    <li>ホームページの予約率向上につながる</li>
+    <li>長期的な集客資産を作れる</li>
+  </ul>
+</section>
+
+<!-- ===== CH14 ===== -->
+<section class="chapter" id="ch14">
+  <div class="chapter-header">
+    <div class="chapter-num">14</div>
+    <div class="chapter-meta">
+      <p class="chapter-label">Chapter Fourteen</p>
+      <h2 class="chapter-title">最終コンセプト</h2>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="text-align:center;font-family:'Noto Serif JP',serif;font-size:clamp(16px,3.5vw,20px);font-weight:700;padding:clamp(20px,4vw,32px);line-height:1.8;">
+    鍼灸院のためのnote資産集客術<br>
+    <span style="font-size:clamp(13px,2.5vw,16px);font-weight:400;color:var(--ink3);">SNSのように流れて消える投稿ではなく、<br>検索される悩み記事を積み上げ、<br>Google検索・AI検索からホームページ予約につなげる店舗集客法。</span>
+  </div>
+
+  <div class="success-box">
+    <p>本企画は、SNS集客や広告集客に代わるものではなく、<strong>長期的に信頼を蓄積し、専門性で選ばれるための集客資産づくり</strong>です。</p><br>
+    <p>短期的なバズではなく、未来のお客様に見つけてもらう記事資産を作ることで、<strong>鍼灸院の集客導線を強化します。</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-gold">鍼灸院のためのnote資産集客術</span>
+  本レポートの内容は購入特典です。無断転載・二次配布はご遠慮ください。
+  <div class="footer-copy">&copy; リバランス整顔美容鍼&trade;</div>
+</footer>
+
+</body>
+</html>

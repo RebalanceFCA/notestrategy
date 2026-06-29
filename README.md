@@ -1,1 +1,0 @@
-# note-store-attraction-strategy
